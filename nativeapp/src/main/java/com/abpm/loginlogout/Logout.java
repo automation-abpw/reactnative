@@ -42,28 +42,40 @@ public class Logout
 		
 		{
 			 Startup.setUp();	
-			 WebDriverWait wait = new WebDriverWait(AppiumDriverInit.getDriver(),120);
-//			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[contains(@resource-id,'ctaText')]")));
-//			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='GET STARTED']")).click();
-//			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[contains(@resource-id,'LOGIN')]")));
-//			 
-//			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='LOGIN']")).click();
-//			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'loginusername')]")).sendKeys(email);
-//			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'loginpassword')]")).sendKeys(pass);
-//			 
-//			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[contains(@resource-id,'buttonlogin')]")).click();
-//			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.ImageView[contains(@resource-id,'ci_icon_edit')]")));
-			 AppiumDriverInit.getDriver().findElement(By.id("com.abp.abpweddings:id/more")).click();
+			 WebDriverWait wait = new WebDriverWait(AppiumDriverInit.getDriver(),150);
+			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text =' REGISTER WITH PHONE/EMAIL']")));
+			 
+		 
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text =' LOGIN NOW ']")).click();
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='I have a Password']")).click();
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Enter Email/Profile Id/Phone']")).click();
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[@index ='0']")).sendKeys(email);
+			 
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[@index ='1']")).click();
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[@index ='1']")).sendKeys(pass);
+			 AppiumDriverInit.getDriver().hideKeyboard();
 			 
 			 Thread.sleep(3000);
-			
-			 ScrollByText.scrollByText("Settings");
-
-			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.LinearLayout[@index='10']")).click();
-			 Thread.sleep(2000);
 			 
-			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[(@text='Logout')]")).click();
-			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[(@text='Logout')]")).click();		 
+			 
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[@index ='0']")).click();
+			// wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Saurabh Test,']")));
+			 
+			 Thread.sleep(3000);
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.view.View[@index='4']")).click();
+			 
+			 //Thread.sleep(6000);
+			 ScrollByText.scrollByText("About");
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Settings']")).click();
+			 //Thread.sleep(3000);
+			 ScrollByText.scrollByText("About");
+			 
+			 
+//			 WebDriverWait wait1 = new WebDriverWait(AppiumDriverInit.getDriver(),10);
+//			 wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Logout']")));
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Logout']")).click();
+			 
+			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[@text ='LOGOUT']")).click();
 			
 		}
 		
@@ -80,17 +92,18 @@ public class Logout
 	@Test
 	
 	public void test()
+	
 	{
 	
 		WebDriverWait wait = new WebDriverWait(AppiumDriverInit.getDriver(),90);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.EditText[contains(@resource-id,'loginusername')]")));
-		WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'action_bar_title')]"));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Enter Email/Profile Id/Phone']")));
+		WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Enter Email/Profile Id/Phone']"));
 		String actualtext=element.getText();
 	    
 	    System.out.println(actualtext);
 	    
 	    Assert.assertEquals(expectedtext , actualtext);
-	 	 
+	 	
 	}
 
 

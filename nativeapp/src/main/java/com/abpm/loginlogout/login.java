@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import com.abpm.excelhandler.ReadExcel;
 import com.abpm.execution.setup.AppiumDriverInit;
 import com.abpm.execution.setup.Startup;
+import com.abpm.reusable.function.ScrollByText;
+
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
@@ -71,6 +73,7 @@ public class login
 	@Test
 	
 	public void test() throws InterruptedException
+	
 	{
 	
 	 System.out.println("test");
@@ -78,8 +81,7 @@ public class login
 	 actvertext = element.getText();
 	 System.out.println(actvertext);
 	 Assert.assertEquals(extvertext, actvertext);
-	 
-	 
+	 	 
 	}
 
 
