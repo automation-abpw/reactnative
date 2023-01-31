@@ -252,16 +252,7 @@ public class RegisterWithEmail
 				.findElement(By.xpath("	//android.widget.TextView[@content-desc='Crop']"))
 				.click();
 			 
-			 
-		    //AppiumDriverInit.getDriver().closeApp();
-			 
-			
-		    
-		    
-			 
-//			RegModerationWithExceptionHandling.moderation();
-//		    expected=RegModerationWithExceptionHandling.exp;
-		  
+	
 		}
 
 		catch (NoSuchElementException e)
