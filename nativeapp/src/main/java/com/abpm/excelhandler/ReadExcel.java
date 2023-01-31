@@ -98,7 +98,7 @@ public class ReadExcel
  {
 	 
     
-  FileInputStream file = new FileInputStream(new File("D:\\eclipse-workspace\\Production3.0SanitySuite\\testdata.xlsx")); 
+  FileInputStream file = new FileInputStream(new File("C:\\Users\\Amit Singh\\reactnative\\nativeapp\\testdata.xlsx")); 
   XSSFWorkbook workbook = new XSSFWorkbook(file);
  
   XSSFSheet Reg = workbook.getSheetAt(0);

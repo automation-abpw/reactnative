@@ -32,7 +32,7 @@ public class ReadExcelStartup
  {
 	 
     
-  FileInputStream file = new FileInputStream(new File("D:\\eclipse-workspace\\Production3.0SanitySuite\\startupsheet.xlsx")); 
+  FileInputStream file = new FileInputStream(new File("C:\\Users\\Amit Singh\\reactnative\\nativeapp\\startupsheet.xlsx")); 
   XSSFWorkbook workbook = new XSSFWorkbook(file);
  
   XSSFSheet startup = workbook.getSheetAt(0);
