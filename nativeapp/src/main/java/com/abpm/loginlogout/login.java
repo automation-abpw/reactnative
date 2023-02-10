@@ -57,7 +57,7 @@ public class login
 			 
 			 
 			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[@index ='0']")).click();
-			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Saurabh Test,']")));
+			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Test user,']")));
 		}
 		
 
@@ -77,7 +77,7 @@ public class login
 	{
 	
 	 System.out.println("test");
-     WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Hi Saurabh Test,']"));
+     WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='Hi Test user,']"));
 	 actvertext = element.getText();
 	 System.out.println(actvertext);
 	 Assert.assertEquals(extvertext, actvertext);
