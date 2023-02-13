@@ -59,7 +59,7 @@ public class SearchById
 			 
 			 
 			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[@index ='0']")).click();
-			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Saurabh Test,']")));
+			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Test user,']")));
 			 
 			 Thread.sleep(3000);
 			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.view.View[@index='2']")).click();
