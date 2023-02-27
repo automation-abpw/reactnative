@@ -57,6 +57,7 @@ public class login
 			 
 			 
 			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.Button[@index ='0']")).click();
+		
 			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Test user,']")));
 		}
 		

@@ -61,7 +61,7 @@ public class ProfileView
 			 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='Hi Test user,']")));
 			 
 			 Thread.sleep(3000);
-			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.view.View[@index='2']")).click();
+			 AppiumDriverInit.getDriver().findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.View/android.view.View[3]/android.widget.TextView[2]")).click();
 			 
 			 AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.EditText[@text ='Search by AWID']")).click();
 			 
@@ -90,9 +90,9 @@ public class ProfileView
 	{
 	
 	 WebDriverWait wait = new WebDriverWait(AppiumDriverInit.getDriver(),50);
-	 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='AW28338120']")));
+	 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text ='AW87917895']")));
 		
-	 WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='AW28338120']"));
+	 WebElement element= AppiumDriverInit.getDriver().findElement(By.xpath("//android.widget.TextView[@text ='AW87917895']"));
 	 actvertext = element.getText();
 	 System.out.println(actvertext);
 	 Assert.assertEquals(extvertext, actvertext);
